@@ -27,6 +27,7 @@ jobs:
         DATABASE_URL: postgresql://postgres:password@postgres:5432/postgres?encoding=utf8&pool=5&timeout=5000
       run: |
         gem install bundler:1.16.1
+        cd docker/api/api
         bundle install --quiet --jobs 4 --retry 3
         bin/rails db:migrate RAILS_ENV=test
     - name: Build and test with Rspc
