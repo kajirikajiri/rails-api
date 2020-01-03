@@ -16,6 +16,7 @@ jobs:
     - name: Build and test with Rspc
       run: |
         cd docker/api/api
+        sudo apt-get -y install libpq-dev
         gem install bundler:1.16.1
         bundle install --quiet --jobs 4 --retry 3
         bundle exec rspec
