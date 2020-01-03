@@ -19,5 +19,7 @@ jobs:
         cd docker/api/api
         gem install bundler:1.16.1
         pwd
+        bundle config build.pg --with-pg-config=/usr/pgsql-9.1/bin/pg_config
         bundle install --quiet --jobs 4 --retry 3
+        echo finish bundle install
         bundle exec rspec
