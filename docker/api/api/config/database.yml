@@ -14,6 +14,7 @@ test:
   <<: *default
   database: myApi_test
   url: <%= ENV['DATABASE_URL'].gsub('?', '_test?' ) %>
+  host: postgres
 
 production:
   <<: *default
