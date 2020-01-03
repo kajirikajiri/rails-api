@@ -33,7 +33,7 @@ jobs:
     - name: Build and test with Rspc
       env:
         RAILS_ENV: test
-        DATABASE_URL: postgresql://postgres:password@postgres:5432/postgres?encoding=utf8&pool=5&timeout=5000
+        DATABASE_URL: postgresql://postgres@localhost:5432/postgres?encoding=utf8&pool=5&timeout=5000
       run: |
         cd docker/api/api
         bundle exec rspec
