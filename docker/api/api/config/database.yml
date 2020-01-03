@@ -13,10 +13,11 @@ development:
 test:
   <<: *default
   database: myApi_test
+  url: <%= ENV['DATABASE_URL'].gsub('?', '_test?' ) %>
 
 production:
   <<: *default
   database: myApi_production
   username: myApi
   password: <%= ENV['MYAPI_DATABASE_PASSWORD'] %>
-  url: <%= ENV['DATABASE_URL'].gsub('?', '_test?' ) %>
+  url: <%= ENV['DATABASE_URL'] %>
