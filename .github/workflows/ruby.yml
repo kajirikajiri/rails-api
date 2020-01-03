@@ -24,6 +24,7 @@ jobs:
     - name: Build App
       env:
         RAILS_ENV: test
+        DATABASE_URL: postgresql://postgres:password@postgres:5432/postgres?encoding=utf8&pool=5&timeout=5000
       run: |
         gem install bundler:1.16.1
         bundle install --quiet --jobs 4 --retry 3

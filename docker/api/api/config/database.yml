@@ -3,7 +3,7 @@ default: &default
   encoding: unicode
   host: db
   username: postgres
-  password:
+  password: password
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -19,4 +19,4 @@ production:
   database: myApi_production
   username: myApi
   password: <%= ENV['MYAPI_DATABASE_PASSWORD'] %>
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'].gsub('?', '_test?' ) %>
