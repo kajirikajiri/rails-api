@@ -16,5 +16,7 @@ jobs:
     - name: Build and test with Rspc
       run: |
         gem install bundler
+        pwd
+        cd docker/api/api
         bundle install --quiet --jobs 4 --retry 3
         bundle exec rspec
