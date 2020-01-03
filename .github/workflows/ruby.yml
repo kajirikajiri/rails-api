@@ -17,7 +17,7 @@ jobs:
       run: |
         pwd
         cd docker/api/api
-        gem install bundler
+        gem install bundler:1.16.1
         pwd
         bundle install --quiet --jobs 4 --retry 3
         bundle exec rspec
