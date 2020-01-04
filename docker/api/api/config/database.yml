@@ -13,7 +13,7 @@ development:
 test:
   <<: *default
   database: postgres_test
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'].gsub('?', '_test?' ) %>
 
 production:
   <<: *default
