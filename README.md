@@ -44,6 +44,8 @@ curl -X POST\
 
 #### get todos with valid token
 ```bash
-curl -X GET -H "Authorization: OAuth eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzgzMDYyNDV9.wS5Q2OdCHyVkUtOAvh-VNdXfE83aptOHTxhhKZhxlmo" rocky-plateau-44026.herokuapp.com/todos
+curl -X GET \
+     -H "Authorization: OAuth eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzgzMDYyNDV9.wS5Q2OdCHyVkUtOAvh-VNdXfE83aptOHTxhhKZhxlmo" \
+     rocky-plateau-44026.herokuapp.com/todos
 # -> [{"id":3,"title":"TITLE","created_by":"2","created_at":"2020-01-05T10:37:42.751Z","updated_at":"2020-01-05T10:37:42.751Z"}]
 ```
