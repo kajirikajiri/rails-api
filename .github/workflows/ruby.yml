@@ -24,7 +24,7 @@ jobs:
     - name: Build App
       env:
         RAILS_ENV: test
-        DATABASE_URL: postgresql://postgres@localhost:5432/postgres?encoding=utf8&pool=5&timeout=5000
+        DATABASE_URL: postgresql://postgres@localhost:5432/postgres_test?encoding=utf8&pool=5&timeout=5000
       run: |
         gem install bundler:1.16.1
         cd docker/api/api
